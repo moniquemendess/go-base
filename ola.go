@@ -2,9 +2,11 @@ package main
 
 import "fmt"
 
+const prefixoOlaPortugues = "Hola "
+
 // creei una función Ola string
 func Ola(nome string) string {
-	return "Hola " + nome
+	return prefixoOlaPortugues + nome
 }
 
 // Llame la funcion Ola mundo
