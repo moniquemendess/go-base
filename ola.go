@@ -6,6 +6,10 @@ const prefixoOlaPortugues = "Hola "
 
 // creei una función Ola string
 func Ola(nome string) string {
+	if nome == "" {
+		nome = "mundo"
+
+	}
 	return prefixoOlaPortugues + nome
 }
 
