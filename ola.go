@@ -11,19 +11,25 @@ const prefixoOlaEspanhol = "Hola, "
 // creei una función Ola string con dos argumentos
 func Ola(nome string, idioma string) string {
 	if nome == "" {
-		nome = "mundo"
+		nome = "Mundo"
+	}
 
+	return prefixodeSaudacao(idioma) + nome
+}
+
+func prefixodeSaudacao(idioma string) (prefixo string) {
+	switch idioma {
+	case frances:
+		prefixo = prefixoOlaFrances
+	case espanhol:
+		prefixo = prefixoOlaEspanhol
+	default:
+		prefixo = prefixoOlaPortugues
 	}
-	if idioma == espanhol {
-		return prefixoOlaEspanhol + nome
-	}
-	if idioma == frances {
-		return prefixoOlaFrances + nome
-	}
-	return prefixoOlaPortugues + nome
+	return
 }
 
 // Llame la funcion Ola mundo
 func main() {
-	fmt.Println(Ola("mundo", "espanhol"))
+	fmt.Println(Ola("Monique", "frances"))
 }
