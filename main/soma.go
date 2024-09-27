@@ -8,7 +8,7 @@ func Soma(numeros []int) int {
 		soma += numero
 	}
 	return soma
-}
+ai
 
 // SomaTudo calcula as respectivas somas de cada slice recebido
 func SomaTodoOResto(numerosPararSomar ...[]int) []int {
@@ -20,3 +20,4 @@ func SomaTodoOResto(numerosPararSomar ...[]int) []int {
 
 	return somas
 }
+

@@ -1,11 +1,13 @@
 package main
 
 import (
+
 	"reflect"
 	"testing"
 )
 
 func TestSoma(t *testing.T) {
+
 
 	t.Run("coleção de qualquer numero", func(t *testing.T) {
 		numeros := []int{1, 2, 3}
@@ -27,5 +29,6 @@ func TestSomaTodoOResto(t *testing.T) {
 
 	if !reflect.DeepEqual(resultado, esperado) {
 		t.Errorf("recebido %v esperado %v", resultado, esperado)
+
 	}
 }
