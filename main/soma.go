@@ -9,3 +9,14 @@ func Soma(numeros []int) int {
 	}
 	return soma
 }
+
+// SomaTudo calcula as respectivas somas de cada slice recebido
+func SomaTodoOResto(numerosPararSomar ...[]int) []int {
+	var somas []int
+
+	for _, numeros := range numerosPararSomar {
+		somas = append(somas, Soma(numeros))
+	}
+
+	return somas
+}
