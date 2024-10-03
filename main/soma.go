@@ -1,23 +1,22 @@
 package main
 
-// O range permite que você percorra um array. Sempre que é chamado, retorna dois valores: o índice e o valor.
+// Soma calcula o valor total dos números em um slice
 func Soma(numeros []int) int {
 	soma := 0
-
 	for _, numero := range numeros {
 		soma += numero
 	}
 	return soma
-ai
+}
 
-// SomaTudo calcula as respectivas somas de cada slice recebido
-func SomaTodoOResto(numerosPararSomar ...[]int) []int {
+// SomaTodoOResto calcula as somas de todos menos o primeiro número
+// da coleção de slices recebida
+func SomaTodoOResto(numerosParaSomar ...[]int) []int {
 	var somas []int
-
-	for _, numeros := range numerosPararSomar {
-		somas = append(somas, Soma(numeros))
+	for _, numeros := range numerosParaSomar {
+		final := numeros[1:]
+		somas = append(somas, Soma(final))
 	}
 
 	return somas
 }
-
